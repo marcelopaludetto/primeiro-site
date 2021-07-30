@@ -1,0 +1,359 @@
+/*----------Página Inicial CSS-----*/
+body {
+  width: 100%;
+  background: url("https://images.unsplash.com/photo-1560788762-d78911d73c4e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+header {
+  margin-bottom: 125px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: #0f2736;
+  height: 8vh;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+/*--------Animação h1 maquina de escrever CSS------*/
+#linha {
+  text-align: center;
+  font-size: 50px;
+  color: #FBFBFB;
+  font-weight: bold;
+  margin: 200px 0 0 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+  #linha::after {
+    content: '|';
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    animation: blink .7s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+/*--------Animação h1 Text Reveal CSS - direcionamento do Usuário-------*/
+
+#direcionamento {
+  text-align: justify;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+#direcionamento2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.container {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1080px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container .col-left {
+  padding: 20px;
+}
+
+.container .col-left h1 {
+  font-size: 30px;
+  position: relative;
+  color: transparent;
+  animation: text_revealing 0s ease forwards;
+  display: inline-block;
+}
+
+.container .col-left h1:nth-child(1) span {
+  animation-delay: 3.5s;
+}
+.container .col-left h1:nth-child(1) {
+  animation-delay: 4s;
+}
+
+.container .col-left h1:nth-child(2) span {
+  animation-delay: 4.5s;
+}
+.container .col-left h1:nth-child(2) {
+  animation-delay: 5s; 
+}
+
+.container .col-left h1:nth-child(3) span {
+  animation-delay: 5.5s;
+}
+.container .col-left h1:nth-child(3) {
+  animation-delay: 6s;
+}
+
+.container .col-left h1 span {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 0;
+  left: 0;
+  top: 0;
+  background-color: #386277;
+  animation: revealing 1s ease forwards;
+  animation-delay: .5s;
+}
+
+.container .col-right {
+  padding: 20px;
+}
+
+@keyframes text_revealing {
+  100% {
+    color: white;
+    border-radius: 3px;
+    background-color: rgba(80,80,80,0.3);
+  }
+}
+
+@keyframes revealing {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+
+/* ------------------ Rodapé CSS -------------------- */
+
+.logo-rodape {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.logo-rodape:hover {
+  transition: 0.4s;
+  opacity: 1.0;
+  text-decoration: underline;
+}
+
+.sublinhado:hover {
+  transition: 0.4s;
+  opacity: 1.0;
+}
+
+.rodape2 {
+  font-weight: 600;
+  font-family: montserrat, sans-serif;
+  opacity: 0.5;
+}
+
+.sublinhado{
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: underline;
+  display: inline-flex;
+  margin-top: 10px;
+  margin-left: 40px;
+  opacity: 0.5;
+}
+
+footer {
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  background: #0f2736;
+  padding: 40px;
+}
+
+.info-criador {
+  margin-top: 20px;
+  opacity: 0.5;
+  text-decoration: underline;
+  font-family: montserrat, sans-serif;
+}
+
+.info-criador2 {
+  display: inline-block;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-left: 20px;
+  opacity: 0.5;
+  font-family: montserrat, sans-serif;
+}
+
+.info-criador2:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.4s;
+  opacity: 1.0;
+}
+
+.string {
+  margin: 0 auto;
+  max-width: 940px;
+  cursor: default;
+  color: #122e40;
+  margin-top: 19px;
+  background: #122e40;
+}
+
+/*------------ Text Reveal Direcionamento Mobile CSS ---------*/
+@media only screen and (max-width: 890px) {
+
+  #direcionamento {
+    font-family: montserrat, sans-serif;
+    max-width: 280px;
+    margin-left: 8px;
+    margin-top: 80px;
+    font-size: 18px;
+  }
+
+  #direcionamento2 {
+    font-family: montserrat, sans-serif;
+    margin-top: 20px;
+    font-size: 15px;
+  }
+
+  .container {
+    max-width: 240px;
+    margin-top: -75px;
+    margin-left: -29px;
+    flex-direction: column-reverse;
+  }
+}
+
+/*-------------------- Maquina de escrever mobile CSS -------------*/
+@media (max-width: 999px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  #linha {
+    margin-top: 80px;
+    margin left: 5px;
+    margin: right: 5px; 
+    max-width: 180px;
+    font-size: 30px;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background: #23232e;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+@media (max-height: 450px) {
+  #linha {
+  margin-top: 20px;
+  margin left: 5px;
+  margin: right: 5px; 
+  max-width: 180px;
+  font-size: 30px;
+  }
+}

@@ -1,0 +1,347 @@
+/*--- Página 2 - Header João Gilberto CSS ---*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: #0f2736;
+  height: 8vh;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background: #23232e;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/*--- Página 2 - Ajustes CSS ---*/
+main {
+  background: url("https://cdn.pixabay.com/photo/2016/10/22/01/54/wood-1759566_960_720.jpg");
+  padding: 500px 0;
+}
+
+.container {
+  background-color: rgba(80,80,80,0.5);
+  border-radius: 40px;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  margin-top: -460px;
+  text-align: center;
+  max-width: 1080px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#joao-img {
+  width: 60%;
+  border: 2px solid #191919;;
+  margin-top: 30px;
+  margin-bottom: -10px;
+}
+
+#joao-img-2 {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+  border: 2px solid #191919;;
+  margin-top: 50px;
+}
+
+#joao-img-3 {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+  border: 2px solid #191919;;
+  margin-top: 50px;
+}
+
+#joao-img-4 {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+  border: 2px solid #191919;;
+  margin-top: 50px;
+}
+
+ .descrição {
+  margin-top: 15px;
+  color: white;
+  font-size: 19px;
+  text-align: center;
+  font-weight: 500;
+  opacity: 0.5;
+  font-family: montserrat, sans-serif;
+ }
+
+.title-matter {
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+.title-matter-2 {
+  font-size: 50px;
+  text-decoration: underline;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+
+#caixa {
+  opacity: 1.0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 980px;
+  text-align: justify;
+  color: white;
+  font-family: montserrat, sans-serif;
+}
+
+.paragrafo {
+  font-size: 19.5px;
+  margin-top: 8px;
+  transition: 0.4s;
+  font-family: montserrat, sans-serif;
+}
+
+/*--- Página 2 - Text Reveal ---*/
+
+#direcionamento {
+  text-decoration: underline;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.container .col-left {
+  padding: 20px;
+}
+
+.container .col-left h1 {
+  font-size: 30px;
+  position: relative;
+  color: transparent;
+  animation: text_revealing 0s ease forwards;
+  display: inline-block;
+}
+
+.container .col-left h1:nth-child(1) span {
+  animation-delay: 0.2s;
+}
+.container .col-left h1:nth-child(1) {
+  animation-delay: 0.7s;
+}
+
+.container .col-left h1:nth-child(2) span {
+  animation-delay: 1.2s;
+}
+.container .col-left h1:nth-child(2) {
+  animation-delay: 1.8s;
+}
+
+.container .col-left h1 span {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 0;
+  left: 0;
+  top: 0;
+  background-color: #5E6F78;
+  animation: revealing 1s ease forwards;
+  animation-delay: .5s;
+}
+
+.container .col-right {
+  padding: 20px;
+}
+
+@keyframes text_revealing {
+  100% {
+    color: white;
+  }
+}
+
+@keyframes revealing {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+
+/*--- Página 2 Rodapé -----*/
+
+.logo-rodape {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.logo-rodape:hover {
+  transition: 0.4s;
+  opacity: 1.0;
+  text-decoration: underline;
+}
+
+.sublinhado:hover {
+  transition: 0.4s;
+  opacity: 1.0;
+}
+
+.rodape2 {
+  font-weight: 600;
+  font-family: montserrat, sans-serif;
+  opacity: 0.5;
+}
+
+.sublinhado{
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: underline;
+  display: inline-flex;
+  margin-top: 10px;
+  margin-left: 40px;
+  opacity: 0.5;
+}
+
+footer {
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  background: #0f2736;
+  padding: 40px;
+  margin-top: -2px;
+}
+
+.info-criador {
+  margin-top: 20px;
+  opacity: 0.5;
+  text-decoration: underline;
+  font-family: montserrat, sans-serif;
+}
+
+.info-criador2 {
+  display: inline-block;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-left: 20px;
+  opacity: 0.5;
+  font-family: montserrat, sans-serif;
+}
+
+.info-criador2:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.4s;
+  opacity: 1.0;
+}
+
+.string {
+  margin: 0 auto;
+  max-width: 940px;
+  cursor: default;
+  color: #122e40;
+  margin-top: 19px;
+  background: #122e40;
+}
